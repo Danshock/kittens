@@ -1,0 +1,21 @@
+<!-- Create form_for @kitten -->
+<h1>Create a new kitten</h1>
+
+<%= form_for @kitten do |f| %>
+<div class="form">
+  <%= f.label :name %>
+  <%= f.text_field :name %><br/>
+
+  <%= f.label :age %>
+  <%= f.number_field :age %><br/>
+
+  <%= f.label :cuteness %>
+  <%= f.text_field :cuteness, placeholder: "Very cute" %><br/>
+
+  <%= f.label :softness %>
+  <%= f.text_field :softness, placeholder: "Extremely soft" %><br/>
+
+  <%= f.submit "Create" %>
+</div>
+<% end %>
+
