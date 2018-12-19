@@ -1,9 +1,11 @@
-<h1>Kitten's index</h1>
+<div class="center">
+<%= link_to "Add new kitten", new_path, class: "btn btn-primary" %>
+</div>
 
 <h2>All kittens</h2>
+
 <% @kittens.each do |kitten| %>
   <ul>
   	<li><%= kitten.name %> - Age: <%= kitten.age %></li>
   </ul>
 <% end %>
-  

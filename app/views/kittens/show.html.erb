@@ -1,8 +1,9 @@
-<h1>Kitten #<%= @kitten.id %></h1>
 
-<div class="kitten_params">
-  Name: <%= @kitten.name %><br/>
-  Age: <%= @kitten.age %><br/>
-  Cutness: <%= @kitten.cuteness %><br/>
-  Softness: <%= @kitten.softness %>
-</div>
+  <h1><%= @kitten.name %></h1>
+  <ul style="list-style-type:none">
+    <li>Age: <%= @kitten.age %></li>
+    <li>Cutness: <%= @kitten.cuteness %></li>
+    <li>Softness: <%= @kitten.softness %></li>
+  </ul>
+  <%= link_to "Return", root_url, class: "btn btn-primary btn-sm" %>
+

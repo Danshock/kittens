@@ -14,7 +14,6 @@ class KittensController < ApplicationController
 	end
 
 	def new
-		#@kitten = Kitten.new(params[:kitten])
 		@kitten = Kitten.new
 	end
 
