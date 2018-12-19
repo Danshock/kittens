@@ -18,6 +18,7 @@ class KittensController < ApplicationController
 	end
 
 	def edit
+		@kitten = Kitten.find(params[:id])
 	end
 
 	def show
@@ -25,9 +26,19 @@ class KittensController < ApplicationController
 	end
 
 	def update
+		@kitten = Kitten.find(params[:id])
+		if @kitten.update_attributes(kitten_params)
+			flash[:success] = "Kitten's profile updated!"
+			redirect_to @kitten
+		else
+			render 'edit'
+		end
 	end
 
 	def destroy
+		Kitten.find(params[:id]).destroy
+		flash[:success] = "Kitten deleted"
+		redirect_to root_url
 	end
 
 private

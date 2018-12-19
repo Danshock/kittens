@@ -1,9 +1,10 @@
-
-  <h1><%= @kitten.name %></h1>
+  <h1><%= @kitten.name %> </h1>
   <ul style="list-style-type:none">
     <li>Age: <%= @kitten.age %></li>
     <li>Cutness: <%= @kitten.cuteness %></li>
     <li>Softness: <%= @kitten.softness %></li>
   </ul>
+
   <%= link_to "Return", root_url, class: "btn btn-primary btn-sm" %>
+  <%= link_to "Edit", edit_kitten_path(@kitten[:id]), class: "btn btn-primary btn-sm" %>
 

@@ -1,28 +1,10 @@
+<% provide(:button_text, "Add Kitten") %>
 <div class="center">
+  <h1>Add a new kitten</h1>
 	<div class="row">
 		<div class="col-md-6 col-md-offset-3">
-<h1>Add a new kitten</h1>
-
-<%= form_for @kitten do |f| %>
-  <%= render 'shared/error_messages' %>
-
-  <%= f.label :name %>
-  <%= f.text_field :name, class: "form-control" %><br/>
-
-  <%= f.label :age %>
-  <%= f.number_field :age, class: "form-control" %><br/>
-
-  <%= f.label :cuteness %>
-  <%= f.text_field :cuteness, placeholder: "Very cute", class: "form-control" %><br/>
-
-  <%= f.label :softness %>
-  <%= f.text_field :softness, placeholder: "Extremely soft", class: "form-control" %><br/>
-
-  <%= f.submit "Add", class: "btn btn-primary" %>
-  <%= link_to "Cancel", root_url, class: "btn btn-secondary" %>
-    
+      <%= render 'form' %>
     </div>
   </div>
 </div>
-<% end %>
 
